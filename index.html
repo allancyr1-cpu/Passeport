@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#F2F6F5">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Passeport">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-180.png">
+<title>Passeport — Langues</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ONBOARDING / LEVEL TEST OVERLAY -->
+<div class="overlay" id="onboarding" style="display:none;">
+  <div class="overlay-inner" id="onboarding-inner"></div>
+</div>
+
+<!-- APP -->
+<div class="app" id="app" style="display:none;">
+  <header class="topbar">
+    <div class="topbar-lang" id="topbar-lang">
+      <span class="flag" id="active-flag">🇬🇧</span>
+      <span id="active-lang-name">Anglais</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <div class="topbar-streak" id="topbar-streak">🔥 0</div>
+  </header>
+
+  <main class="screen" id="screen"></main>
+
+  <nav class="tabbar" id="tabbar">
+    <button class="tab active" data-screen="today">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>
+      <span>Aujourd'hui</span>
+    </button>
+    <button class="tab" data-screen="vocab">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="5" width="13" height="16" rx="2"/><path d="M9 2h11a2 2 0 0 1 2 2v14"/></svg>
+      <span>Vocab</span>
+    </button>
+    <button class="tab" data-screen="practice">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-8.9 8.4 8.6 8.6 0 0 1-3.5-.8L3 20l1-5a8.4 8.4 0 0 1-.9-3.9A8.5 8.5 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg>
+      <span>Prompts</span>
+    </button>
+    <button class="tab" data-screen="progress">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 8l-5 5-3-3-4 4"/></svg>
+      <span>Progrès</span>
+    </button>
+    <button class="tab" data-screen="settings">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1.2l2-1.6-2-3.4-2.4 1a7 7 0 0 0-2-1.2L14 2h-4l-.5 2.4a7 7 0 0 0-2 1.2l-2.4-1-2 3.4 2 1.6a7 7 0 0 0 0 2.4l-2 1.6 2 3.4 2.4-1a7 7 0 0 0 2 1.2L10 22h4l.5-2.4a7 7 0 0 0 2-1.2l2.4 1 2-3.4-2-1.6A7 7 0 0 0 19 12z"/></svg>
+      <span>Réglages</span>
+    </button>
+  </nav>
+</div>
+
+<!-- LANG SWITCHER SHEET -->
+<div class="sheet-backdrop" id="lang-sheet" style="display:none;">
+  <div class="sheet" id="lang-sheet-inner"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="data.js"></script>
+<script src="vocab.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
